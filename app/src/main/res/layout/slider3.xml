@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/photoone"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="213dp"
+        android:layout_height="208dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/slider3" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:text="Utility from The Best"
+        android:textColor="@color/purewhite"
+        android:textSize="30sp"
+
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:letterSpacing=".04"
+        android:text=" Pay After You've Approve Your Work,Request For Changes At No Additional Costs,Get No suprise fees."
+        android:textAlignment="center"
+        android:textColor="@color/purewhite"
+        android:textSize="14sp"
+        app:layout_constraintVertical_bias="0.060000002" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/acopp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="213dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintVertical_bias="0.07999998"
+        app:srcCompat="@drawable/slider1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:text="Round-the-clock Assist"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:letterSpacing="0.04"
+        android:text="We Bring You FreeLancers At Your Fingertips.Get To Control Your Projects Or Submit Orders Accross Multiple Devices Using Your Managing Account And Be Assured Of Immediate Responce.Our Round-The-Clock Support Team Is Available To Help You Anytime."
+        android:textAlignment="center"
+
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintVertical_bias="0.060000002" />
+</LinearLayout>

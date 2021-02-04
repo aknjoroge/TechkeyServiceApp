@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1.0, initial-scale=1.0">
+    <title>App</title>
+
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <div class="whole" id="whole">
+        <span class="name">BudgetApp</span>
+        <span class="balance">Balance:</span>
+        <span class="balamt" id="balamt">$ </span>
+        <span class="income">Income</span>
+        <span class="incomeamt" id="incomeamt">$</span>
+        <span class="outcome">Outcome</span>
+        <span class="outcomeamt" id="outcomeamt">$</span>
+
+        <div class="dash" id="dash">
+            <span on class="dashName"><b>Dashboard</b></span>
+            <div class="navbar" id="navbar">
+                <div class="button" id="button">
+                    <input onclick="expHide()" type="button" class="expenseEl" id="expenseEl" value="Expenses">
+                    <input onclick="incHide()" type="button" class="incomeEl" id="incomeEl" value="Income">
+                    <input onclick="hideAll()" type="button" class="allEl" id="allEl" value="All">
+                </div>
+            </div>
+            <div class="output" id="output">
+            </div>
+
+            <div class="footer" id="footer">
+                <input type="text" placeholder="Title" class="title" id="title" name="title">
+                <input type="number" placeholder="$0.00" name="amt" class="amt" id="amt">
+                <div onclick="income1()" class="addimgIncome" id="addimgIncome">
+                    <img " src="add.jpeg.png " alt="Add ">
+                </div>
+                <div onclick="expense()" class="addimgOutcome" id="addimgOutcome">
+                    <img " src="add.jpeg.png " alt="Add ">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js "></script>
+</body>
+
+</html>

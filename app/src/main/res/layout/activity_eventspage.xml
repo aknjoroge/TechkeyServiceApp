@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/photoone"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".eventspage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ev1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:shape="ring"
+            app:cardCornerRadius="95dp"
+            app:cardElevation="20dp">
+
+            <Button
+                android:id="@+id/toappoint2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/design_default_color_on_primary"
+                android:text="Dj"
+                android:textColor="@color/black"
+                android:textSize="24sp">
+
+            </Button>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ev2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:shape="ring"
+            app:cardCornerRadius="95dp"
+            app:cardElevation="20dp">
+
+            <Button
+
+                android:id="@+id/toappoint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/design_default_color_on_primary"
+                android:text="MUSIC"
+                android:textColor="@color/black"
+                android:textSize="24sp">
+
+            </Button>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ev3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:shape="ring"
+            app:cardCornerRadius="95dp"
+            app:cardElevation="20dp">
+
+            <Button
+
+                android:id="@+id/toeventbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/design_default_color_on_primary"
+                android:text="EVENT"
+                android:textColor="@color/black"
+                android:textSize="24sp">
+
+            </Button>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/eG"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+app:cardCornerRadius="10dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Afordable Dj School"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Best In Town Music Shool"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Commited in Provoding Best Event Services"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView362"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="CHOOSE YOUR CHOICE"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

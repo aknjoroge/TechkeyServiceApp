@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+
+    android:orientation="vertical"
+    tools:context=".softwares">
+
+    <TableLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:padding="10dp"
+                android:drawableTop="@drawable/web_24"
+                android:id="@+id/softweb"
+                android:layout_width="110dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/custominput"
+                android:layout_height="60dp"
+                android:text="web" />
+
+            <Button
+                android:padding="10dp"
+                android:layout_margin="3dp"
+                android:drawableTop="@drawable/android_24"
+                android:id="@+id/softandroid"
+                android:layout_width="110dp"
+                android:background="@drawable/custominput"
+                android:layout_height="60dp"
+                android:text="Androdid apps" />
+
+            <Button
+                android:padding="10dp"
+                android:drawableTop="@drawable/computer_24"
+                android:id="@+id/softdesk"
+                android:layout_width="110dp"
+                android:background="@drawable/custominput"
+                android:layout_height="60dp"
+                android:text="Desktop Apps" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:gravity="center">
+
+
+            <FrameLayout
+                android:id="@+id/frameone"
+                android:layout_width="110dp"
+                android:layout_height="5dp"
+                android:background="#E62828">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frametwo"
+                android:layout_width="110dp"
+                android:layout_height="5dp"
+                android:background="#E62828">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/framethree"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#E62828">
+
+            </FrameLayout>
+        </TableRow>
+
+        <FrameLayout
+            android:id="@+id/framemain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/blue" />
+
+    </TableLayout>
+</LinearLayout>

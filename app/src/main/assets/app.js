@@ -1,0 +1,210 @@
+//VARIABLES DECLARATIONS
+const appName = document.querySelector('.name'); //BudgetApp
+const balance = document.querySelector('.balance'); //Balance
+const balamt = document.querySelector('.balamt'); //$
+const income = document.querySelector('.income'); //income
+const outcome = document.querySelector('.outcome'); //outcome
+const incomeamt = document.querySelector('.incomeamt'); //$ below income
+const outcomeamt = document.querySelector('.outcomeamt'); //$ below outcome
+const dashName = document.querySelector('.dashName'); //Dashboard
+
+//Buttons declarations
+const expenseEl = document.querySelector('.expenseEl'); //Expenses
+const incomeEl = document.querySelector('.incomeEl'); //Incomebtn
+const allEl = document.querySelector('.allEl'); //All btn
+const addimgOutcome = document.querySelector('.addimgOutcome'); //image for adding
+const addimgIncome = document.querySelector('.addimgIncome');
+
+//Text areas
+const title = document.querySelector('.title'); //textArea Title as placeHolder
+const amount = document.querySelector('.amt'); //Amount to be inputed 
+const outputArea = document.querySelector(".output");
+const footer = document.querySelector(".footer");
+//--------------------------------------------------------------------------------
+footer.style.display = 'none';
+
+
+function hideAll() {
+    outputArea.innerHTML = " ";
+    outputArea.style.display = 'initial';
+    footer.style.display = 'none';
+    var a = 1;
+    for (let i = 0; i < localStorage.length; i++) {
+        const key1 = localStorage.key(i);
+        const value = JSON.parse(localStorage.getItem(key1));
+
+        if (value.exp >= 0) {
+            var rees = +localStorage.getItem('output') - +JSON.parse(localStorage.getItem(key1)).exp;
+            outputArea.innerHTML += `<span style="color:red">${a} ${key1}: ${value.exp}
+              <img value="${i}"  onclick="localStorage.setItem('output', ${rees});localStorage.removeItem('${key1}');dispOut();balance1();hideAll()" src="delete.png" id="delE" >
+               </span> <br/>`;
+            a++;
+            continue;
+        }
+        if (value.inc >= 0) {
+            var key11 = key1;
+            var reesss = +localStorage.getItem('input') - +JSON.parse(localStorage.getItem(key1)).inc;
+            outputArea.innerHTML += `<span style="color:green">${a} ${key1}: ${value.inc}  
+             <img onclick="localStorage.setItem('input', ${reesss});localStorage.removeItem('${key1}');dispInp();balance1();hideAll()" src="delete.png " id="delIn" >
+             </span> <br/>`;
+            outputArea.style.color = 'green';
+
+            a++;
+            continue;
+        } else {
+            continue;
+        }
+
+
+    }
+}
+
+function delExp() {
+    //localStorage.removeItem(document.getElementById())
+    //localStorage.removeItem(document.getElementsByClassName("delE").value);
+    hideAll();
+
+}
+
+function delInc() {
+    // var v = document.getElementById("delI").value;
+    // localStorage.removeItem(document.getElementsByClassName("delIn").value);
+    hideAll();
+}
+
+function incHide() {
+    outputArea.innerHTML = " ";
+    footer.style.display = 'initial';
+    addimgIncome.style.display = 'initial';
+    addimgOutcome.style.display = 'none';
+}
+
+function expHide() {
+    outputArea.innerHTML = " ";
+    footer.style.display = 'initial';
+    addimgOutcome.style.display = 'initial';
+    addimgIncome.style.display = 'none';
+}
+
+function income1() {
+
+    var titleO = document.getElementById("title").value;
+    var add = document.getElementById("amt").value;
+    if (!titleO && !add) {
+        return;
+    }
+    outputArea.innerHTML = titleO + ' : ' + add;
+    var input = { inc: add };
+    localStorage.setItem(titleO, JSON.stringify(input));
+    // putinptput();
+    var initialData = localStorage.getItem('input');
+    //var test = initialData.income;
+    if (null == initialData) {
+        localStorage.setItem('input', add);
+    } else {
+        var inputValue = localStorage.getItem('input');
+        var sum = +inputValue + +add;
+        localStorage.setItem('input', sum);
+    }
+    //outPut()
+    var k = document.getElementById("incomeamt");
+    var localData = localStorage.getItem('input');
+    k.innerHTML = localData;
+    //other
+    var ki = document.getElementById("outcomeamt");
+    var localData = localStorage.getItem('output');
+    ki.innerHTML = localData;
+    balance1();
+    document.getElementById("title").value = "";
+    document.getElementById("amt").value = "";
+}
+
+function expense() {
+
+    var titleO = document.getElementById("title").value;
+    var add = document.getElementById("amt").value;
+    if (!titleO && !add) {
+        return;
+
+    }
+    outputArea.innerHTML = titleO + ' : ' + add;
+    var output = { exp: add };
+    localStorage.setItem(titleO, JSON.stringify(output));
+    // putInput();
+    var initialData = localStorage.getItem('output');
+    //var test = initialData.income;
+    if (null == initialData) {
+        localStorage.setItem('output', add);
+    } else {
+        var outputValue = localStorage.getItem('output');
+        var sum = +outputValue + +add;
+        localStorage.setItem('output', sum);
+    }
+    //outPut()
+    var ki = document.getElementById("outcomeamt");
+    var localData = localStorage.getItem('output');
+    ki.innerHTML = localData;
+    //other
+    var k = document.getElementById("incomeamt");
+    var localData = localStorage.getItem('input');
+    k.innerHTML = localData;
+    balance1();
+    document.getElementById("title").value = "";
+    document.getElementById("amt").value = "";
+}
+
+function balance1() {
+    var incamt = localStorage.getItem('input');
+    var outamt = localStorage.getItem('output');
+    var bal = +incamt - +outamt;
+    var balDisp = document.getElementById("balamt");
+    balDisp.innerHTML = bal;
+}
+var ki = document.getElementById("outcomeamt");
+var localData = localStorage.getItem('output');
+ki.innerHTML = localData;
+//other
+var k = document.getElementById("incomeamt");
+var localData = localStorage.getItem('input');
+k.innerHTML = localData;
+var incamt = localStorage.getItem('input');
+var outamt = localStorage.getItem('output');
+var bal = +incamt - +outamt;
+var balDisp = document.getElementById("balamt");
+balDisp.innerHTML = bal;
+
+function dispOut() {
+    var km = document.getElementById("outcomeamt");
+    var localData = localStorage.getItem('output');
+    km.innerHTML = localData;
+}
+
+function dispInp() {
+    var kq = document.getElementById("incomeamt");
+    var localData = localStorage.getItem('input');
+    kq.innerHTML = localData;
+}
+/**
+ * function add() {
+    //outcome.style.display = 'none';
+    var title = document.getElementById("title").value;
+    var add = document.getElementById("amt").value;
+    var output = document.getElementById("output");
+    var incomeamt = document.getElementById("incomeamt");
+
+    var data = {
+            title: add,
+            salary: '300'
+        },
+        localData,
+        k = document.getElementById("outcomeamt");
+    localStorage.setItem('data', JSON.stringify(data));
+    localData = JSON.parse(localStorage.getItem('data'));
+    k.innerHTML = localData.salary;
+
+    incomeamt.innerHTML = '$' + (+add + +localData.salary);
+    output.innerHTML = title + ' : ' + add;
+
+}
+JSON.parse(localStorage.getItem('Salary')).inc
+ */

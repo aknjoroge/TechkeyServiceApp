@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/regbg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".logocreation">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="20dp"
+            android:elevation="10dp"
+            app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/compnameedit"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custominput"
+                android:drawableStart="@drawable/info_24"
+                android:drawablePadding="5dp"
+                android:hint="COMPANY NAME"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/compmotoedit"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custominput"
+                android:drawableStart="@drawable/motoic4"
+                android:drawablePadding="5dp"
+                android:hint="COMPANY MOTO OR SLOAGAN"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/bstypeedit"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custominput"
+                android:drawableStart="@drawable/type_24"
+                android:drawablePadding="5dp"
+                android:hint="TYPE OF BUSINESS"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/logodescedit"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custominput"
+                android:drawableStart="@drawable/info_24"
+                android:drawablePadding="5dp"
+                android:hint="LOGO DESCRIPTION"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textSize="12sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp">
+
+                    <TextView
+                        android:id="@+id/textView58"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="DO YOU HAVE A LOGO DESIGN TO UPLOAD?"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <Switch
+                        android:id="@+id/logouploadswitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YES?" />
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/logouploadbtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/custominput"
+                android:text="Upload logo"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/logoimgview"
+                android:layout_width="210dp"
+                android:layout_height="210dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/ic_splashlogo" />
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="5dp"
+
+                android:elevation="10dp"
+                app:cardBackgroundColor="@color/blue"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <Button
+                    android:id="@+id/logosubmitbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="submit"
+                    android:textColor="@color/purewhite" />
+            </androidx.cardview.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/logobar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xstudioo.welcomeapp">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_newicon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_newicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".budget"></activity>
+        <activity
+            android:name=".helppage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".logocreation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Photochoose"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".qrreceipttwo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".qrreceipt"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventbooking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventappointment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".webslider"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weblanch"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".photolanch"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity android:name=".eventspage" />
+        <activity
+            android:name=".eventwelcome"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Events"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".softwares"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".about"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".shop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".websites"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".photoshop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".photoshopwelcome"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scanqr"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".generate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".qrcode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".accounts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainpage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".register"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".lock"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Splash"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Slider"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

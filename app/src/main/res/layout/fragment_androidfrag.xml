@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/regbg"
+
+    tools:context=".androidfrag">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ANDROID/MOBILE APPS"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/andapp"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/custominput"
+            android:drawableStart="@drawable/info_24"
+            android:drawablePadding="5dp"
+            android:hint="COMPANY NAME"
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/andname"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/custominput"
+            android:drawableStart="@drawable/info_24"
+            android:drawablePadding="5dp"
+            android:hint="THE APP NAME"
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/andserve"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/custominput"
+            android:drawableStart="@drawable/motoic4"
+            android:drawablePadding="5dp"
+            android:hint="SERVICE TO OFFER"
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/andbudget"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/custominput"
+            android:drawableStart="@drawable/money_on_24"
+            android:drawablePadding="5dp"
+            android:hint="YOUR BUDGET"
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            android:textSize="12sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Do You Have A Design Already?"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <Switch
+                    android:id="@+id/androidswitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YES"
+                    android:textColor="@color/purewhite" />
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@color/blue"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <Button
+                android:id="@+id/andsubmitbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="submit"
+                android:textColor="@color/purewhite" />
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/fragandbar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="15dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".helppage">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+app:cardCornerRadius="15dp"
+        android:layout_margin="4dp"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView56"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HOW IT WORKS?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="The services offered, be it photoshop, event management or any other, are each done by individuals people who have learnt and trained for that service or skill. The team is made of learned people ,who have morals and respect, thus, We as a Company ensure good quality delivered within a short or exact period of work to our Clients." />
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IN CASE OF A COMPLAIN"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We Take Complaints Positively and We Will Recheck An Order Free Of Charge Or Redo Some Designs If A Client Requests.For Additional Help Please Contact The Management Using Cell Numbers Provided Below" />
+
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONTACT"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView68"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:textColor="@color/blue"
+        android:layout_height="wrap_content"
+        android:text="Support" />
+
+    <Button
+        android:id="@+id/button1c"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custominput"
+        android:text="call : +254710664418" />
+
+    <Button
+        android:layout_margin="5dp"
+        android:id="@+id/button2c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custominput"
+        android:text="call : +254797965680" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

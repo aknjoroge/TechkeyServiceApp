@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/regbg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".eventappointment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        app:cardMaxElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="You Are About To book an appointment With TuwashowMedia Set Time and Date To Go For Registrartion"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="68dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="10dp"
+                        tools:layout_editor_absoluteX="30dp"
+                        tools:layout_editor_absoluteY="237dp">
+
+                        <Button
+                            android:id="@+id/timebtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:text="choose time"
+
+                            android:textColor="@color/blue" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/texttime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Time"
+                        android:textAlignment="center"
+                        tools:layout_editor_absoluteX="287dp"
+                        tools:layout_editor_absoluteY="344dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="10dp"
+                        tools:layout_editor_absoluteX="50dp"
+                        tools:layout_editor_absoluteY="160dp">
+
+                        <Button
+                            android:id="@+id/datebtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:text="choose date"
+                            android:textColor="@color/blue"
+                            tools:layout_editor_absoluteX="55dp"
+                            tools:layout_editor_absoluteY="295dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        tools:layout_editor_absoluteX="244dp"
+                        tools:layout_editor_absoluteY="176dp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="The Studio is Located at Ngara opposite Hacienda "
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="448dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:elevation="20dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="20dp"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="554dp">
+
+                <Button
+                    android:id="@+id/mapbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:text="Show in maps?"
+                    tools:layout_editor_absoluteX="140dp"
+                    tools:layout_editor_absoluteY="496dp" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Support number : 0710664418"
+                tools:layout_editor_absoluteX="128dp"
+                tools:layout_editor_absoluteY="619dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:elevation="20dp"
+                app:cardBackgroundColor="@color/blue"
+                app:cardCornerRadius="10dp"
+
+                app:cardElevation="10dp"
+
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="646dp">
+
+                <Button
+
+                    android:id="@+id/apllybtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:text="apply"
+                    android:textColor="@color/purewhite"
+                    tools:layout_editor_absoluteX="297dp"
+                    tools:layout_editor_absoluteY="734dp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progbks"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+
+
+</LinearLayout>

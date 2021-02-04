@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <script src="jsLesson.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+        var i = 0,
+            a;
+        var time = 1500;
+        var image = ['bg.png', 'bird.png', 'fg.png'];
+
+        function changeImg() {
+            document.slidee.src = image[i];
+            if (i < image.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+            setTimeout(() => {
+                changeImg();
+            }, time);
+        }
+        window.onload = changeImg;
+    </script>
+
+  
+
+    <img name="slidee" width="20%" height="20%" alt="">
+
+
+</body>
+
+</html>

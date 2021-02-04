@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".qrreceipttwo">
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/textView19t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/rederror_24"
+        android:fontFamily="sans-serif"
+        android:text="TAKE A SCREENSHOT OF THIS QR-CODE YOU WILL USE IT AS A GATEPASS AT TECHKEY, AND ALSO USE IT TO TRACK YOUR ORDER"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/qrrcimgt"
+        android:layout_width="237dp"
+        android:layout_height="330dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_splashlogo" />
+
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/textView45t"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Do Not Loose This Qr-Code,we are unable to store it automatically at this time. :)"
+        android:textAlignment="center" />
+
+</LinearLayout>

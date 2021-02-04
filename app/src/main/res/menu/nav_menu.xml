@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+
+    <item
+        android:id="@+id/photoshop"
+        android:icon="@drawable/amera_24"
+        android:title="PhotoShop / Ai" />
+    <item
+        android:id="@+id/events"
+        android:icon="@drawable/event_24"
+        android:title="Events" />
+
+    <item
+        android:id="@+id/software"
+        android:icon="@drawable/software_24"
+        android:title="Software" />
+
+    <item
+        android:id="@+id/websites"
+        android:icon="@drawable/web_24"
+        android:title="WebBrowser" />
+    <item
+        android:id="@+id/shops"
+        android:icon="@drawable/shopping_cart_24"
+        android:title="Shop" />
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/info_24"
+        android:title="about" />
+    <item
+        android:id="@+id/messnav"
+        android:icon="@drawable/message_24"
+        android:title="Help" />
+</menu>
