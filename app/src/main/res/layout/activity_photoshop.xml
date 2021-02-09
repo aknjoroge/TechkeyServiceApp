@@ -175,7 +175,7 @@
                                 android:id="@+id/textView54"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="explain how Laoreet. Sociis facilisi  facilisi. Dictum massa odio dis mus faucibus. it works Purus dictumst per turpis  lacinia pretium pellentesque  et conubia, et."
+                                android:text="Select the Photo you want to be worked on and select the type of service you are interested in then add a description about the service ,  We will respond as soon as we receive the data."
                                 android:textAlignment="center" />
                         </TableRow>
 

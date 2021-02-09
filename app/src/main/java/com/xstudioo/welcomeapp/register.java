@@ -24,6 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -116,6 +117,8 @@ public class register extends AppCompatActivity {
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void avoid) {
+                                    //regforbudget();
+                                    createbank();
                                     Log.d(TAG, "user profile created " + userid);
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
@@ -137,6 +140,25 @@ public class register extends AppCompatActivity {
 
             }
         });
+
+
+
+
+    }
+    private void createbank() {
+
+        Map<String,Object> userbank =new HashMap<>();
+        userbank.put("income","0");
+        userbank.put("expense","0");
+        final DocumentReference documentReference = fStore.collection("BudgetCart").document("Foruser").collection(userid).document("bank");
+
+        documentReference.set(userbank, SetOptions.merge());
+
+
+
+    }
+
+    private void regforbudget() {
 
 
 
