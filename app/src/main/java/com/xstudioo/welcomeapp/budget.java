@@ -153,7 +153,9 @@ public class budget extends AppCompatActivity implements AdapterView.OnItemSelec
                 documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void avoid) {
-
+                        name.setText("");
+                        amount.setText("");
+                        Toast.makeText(budget.this, "Data added", Toast.LENGTH_SHORT).show();
 
                         DocumentReference documentReference = fStore.collection("Budgetlist").document("all").collection(userid)
                                 .document(storemode);
@@ -278,6 +280,11 @@ public class budget extends AppCompatActivity implements AdapterView.OnItemSelec
     }
 
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        autobanktxt();
+    }
 
     private void budgetCart() {
 
@@ -427,7 +434,7 @@ public class budget extends AppCompatActivity implements AdapterView.OnItemSelec
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(budget.this, "errorr "+e.toString(), Toast.LENGTH_SHORT).show();
+
             }
         });
 

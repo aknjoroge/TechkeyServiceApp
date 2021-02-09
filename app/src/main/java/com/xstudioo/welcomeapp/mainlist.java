@@ -1,12 +1,14 @@
 package com.xstudioo.welcomeapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,13 +22,21 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 public class mainlist extends AppCompatActivity {
     FirebaseFirestore fStore;
-
+    int inc;
+    String globexp,globinc;
+    int gdele;
+    double exp;
+    String savedamount;
 
     TextView menu;
     FirebaseUser using;
@@ -34,6 +44,7 @@ public class mainlist extends AppCompatActivity {
     String userid;
     FirebaseAuth fAuth;
     StorageReference storageReference;
+    String delamount;
 
     public RecyclerView recyclerView;
     String toload;
@@ -56,7 +67,7 @@ public class mainlist extends AppCompatActivity {
         using=fAuth.getCurrentUser();
         menu.setText("Your "+toload+" Page.");
         // Toast.makeText(this, toload, Toast.LENGTH_SHORT).show();
-
+        autobanktxt();
     }
 
     @Override
@@ -72,14 +83,18 @@ public class mainlist extends AppCompatActivity {
                 holder.txtlname.setText("Name :"+model.getName()+".");
                 holder.txtlamount.setText("Amount: "+model.getAmount()+"/=");
                 holder.txtldate.setText(model.getDate());
-
                 globkey=model.getDate();
+
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View v) {
-                       // oncartclick();
+
+                        Intent intent=new Intent(mainlist.this,details.class);
+                        intent.putExtra("key",model.getDate());
+                        intent.putExtra("cat",toload);
+                        startActivity(intent);
                     }
                 });
             }
@@ -97,40 +112,38 @@ public class mainlist extends AppCompatActivity {
         adapter.startListening();
 
     }
-    public void oncartclick(){
-
-        android.app.AlertDialog dialog = new AlertDialog.Builder(this,R.style.AlertDialogStyle)
-                .setTitle("Cart Opptions")
-                .setMessage("Remove Product?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        fStore.collection("Budgetlist").document(toload).collection(userid).document(globkey)
-                                .delete()
-                                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void aVoid) {
-                                        Toast.makeText(mainlist.this, "Item Deleted", Toast.LENGTH_SHORT).show();
-                                    }
-                                })
-                                .addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(mainlist.this, "Error deleting document", Toast.LENGTH_SHORT).show();
-                                    }
-                                });
 
 
-                    }
-                })
-                .setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
 
-                    }
-                })
-                .show();
+
+
+
+
+    private void autobanktxt() {
+        final DocumentReference documentReference = fStore.collection("BudgetCart").document("Foruser").collection(userid).document("bank");
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                String amounttake=documentSnapshot.getString("expense");
+                String amountake2=documentSnapshot.getString("income");
+                //  Toast.makeText(MainActivity.this, "oneis"+amountake2, Toast.LENGTH_SHORT).show();
+
+                if(amountake2==null && amounttake ==null){
+
+                }else {
+                    globexp=amounttake;
+                    globinc=amountake2;
+
+
+                }
+
+
+
+            }
+        });
+
+
+
     }
-
 
 }
